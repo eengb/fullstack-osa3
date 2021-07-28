@@ -12,7 +12,7 @@ DELETE http://localhost:3001/api/persons/1
 
 
 
-POST http://localhost:3001/api/persons
+POST https://fso21-osa3-puhelinluettelo.herokuapp.com/api/persons
 Content-Type:application/json
 
 {
