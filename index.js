@@ -44,7 +44,7 @@ morgan.token('content',(req) => {
   
   return JSON.stringify(req.body)
 }else {
-  return ''
+  return null
 }
 })
 
