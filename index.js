@@ -39,13 +39,12 @@ app.use(express.json())
 
 
 morgan.token('content',(req) => {
-
-  if (req.method === 'POST'){
   
+  if (req.method === 'POST'){
   return JSON.stringify(req.body)
-}else {
-  return req.body
-}
+  }else{
+    return null
+  }
 })
 
 
@@ -60,7 +59,7 @@ app.get('/info', (req, res) => {
 })
 
 app.get('/api/persons', (req, res) => {
-  res.json(persons.toJson())
+  res.json(persons)
 })
 
 app.get('/api/persons/:id', (req,res) =>{
