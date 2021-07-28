@@ -40,11 +40,10 @@ app.use(express.json())
 
 morgan.token('content',(req) => {
   
-  if (req.method === 'POST'){
+ 
   return JSON.stringify(req.body)
-  }else{
-    return req.body
-  }
+
+  
 })
 
 
